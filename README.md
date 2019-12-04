@@ -1,6 +1,6 @@
 # KMP-VirtualOmnichord
 
-Tips and how to use: 
+##Tips and how to use: 
 
 An internet connection is required to use this program. All you have to do is click the panel to hear the desired chord. The better the internet connection, the faster the response will be. If you get little to no response, or the panel freeezes gray when you click it without producing sound, it's likely your internet connection is too weak or there is too much traffic on your network (i.e. LewiWifi in the library during finals week -___-) 
 

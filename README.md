@@ -22,40 +22,40 @@ Sidenote: You'll notice that I have chords below called "X Sus 13". I won't get 
 ## ii-V-I: 
 
 
-**C: D Min. --- G Dom. --- C Maj.
+**C: D Min. --- G Dom. --- C Maj.**
 
 
-**F: G Min. --- C Dom. --- F Maj. 
+**F: G Min. --- C Dom. --- F Maj.** 
 
 
-**Bb: C Min. --- F Dom. --- Bb Maj. 
+**Bb: C Min. --- F Dom. --- Bb Maj.** 
 
 
-**Eb: F Min. --- Bb Dom. --- Eb Maj. 
+**Eb: F Min. --- Bb Dom. --- Eb Maj.** 
 
 
-**Ab: Bb Min. --- Eb Dom. --- Ab Maj. 
+**Ab: Bb Min. --- Eb Dom. --- Ab Maj.** 
 
 
-**Db: Eb Min. --- Ab Dom. --- Db Maj. 
+**Db: Eb Min. --- Ab Dom. --- Db Maj.** 
 
 
-**Gb: Ab Min. --- Db Dom. --- Gb Maj.
+**Gb: Ab Min. --- Db Dom. --- Gb Maj.**
 
 
-**B: Db Min.(C# Min.) --- Gb Dom.(F# Dom.) --- B Maj. 
+**B: Db Min.(C# Min.) --- Gb Dom.(F# Dom.) --- B Maj.** 
 
 
-**E: Gb Min.(F# Min.) --- B Dom. --- E Maj. 
+**E: Gb Min.(F# Min.) --- B Dom. --- E Maj.** 
 
 
-**A: B Min. --- E Dom. --- A Maj. 
+**A: B Min. --- E Dom. --- A Maj.** 
 
 
-**D: E Min. --- A Dom. --- D Maj. 
+**D: E Min. --- A Dom. --- D Maj.** 
 
 
-**G: A Min. --- D Dom. --- G Maj. 
+**G: A Min. --- D Dom. --- G Maj.** 
 
 
 

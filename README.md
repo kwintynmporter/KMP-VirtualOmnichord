@@ -72,23 +72,3 @@ Ab Min. - Db Alt. - Gb Maj. - B Alt. - E Maj.
 
 
 These are just a few that I came up with over time, using in songs, practice etc. But you'll see there are many more than ii-V-I's, even being able to mix and match chords. 
-
-
-
-Oh and before I forget 
-
-
-  _      _      _
-  
-  
-  
->(.)__ <(.)__ =(.)__
-
-
-
- (___/  (___/  (___/  
- 
- 
- 
- 
- we be swimming, kinda quacky doe

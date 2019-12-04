@@ -62,13 +62,13 @@ Sidenote: You'll notice that I have chords below called "X Sus 13". I won't get 
 Now that you see that Dominant chords preceed major chords, see if you're able to substitute and mix chords/keys together to make for decent progressions. Use your ears. Here are some of my favorites. 
 
 
-**F Min. - Bb Dom. - Eb Maj. - Ab Dom. 
+**F Min. - Bb Dom. - Eb Maj. - Ab Dom.** 
 
 
-**E Min. - F Sus. - A Sus - D Maj. 
+**E Min. - F Sus. - A Sus - D Maj.** 
 
 
-**Ab Min. - Db Alt. - Gb Maj. - B Alt. - E Maj. 
+**Ab Min. - Db Alt. - Gb Maj. - B Alt. - E Maj.** 
 
 
 These are just a few that I came up with over time, using in songs, practice etc. But you'll see there are many more than ii-V-I's, even being able to mix and match chords. 

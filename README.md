@@ -1,4 +1,4 @@
-# KMP-VirtualOmnichord
+# KMP-VirtualOmnichord LOCAL
 
 
 #  MAIN JAVA FILE: MyChords.java

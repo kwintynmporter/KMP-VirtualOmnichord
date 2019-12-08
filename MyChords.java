@@ -2,12 +2,24 @@ import java.applet.Applet;
 import java.applet.AudioClip;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.BorderLayout; 
 import java.awt.event.*;
 import java.net.URL;
 import javax.swing.*;
 import java.io.*; 
 import javax.sound.sampled.*; 
 import javax.swing.JOptionPane;
+
+import java.util.Scanner; 
+
+import java.awt.AWTException; 
+import java.awt.Rectangle; 
+import java.awt.Toolkit; 
+import java.awt.Robot; 
+import java.awt.image.BufferedImage; 
+import java.io.IOException; 
+import java.io.File; 
+import javax.imageio.ImageIO; 
 
 public class MyChords extends JFrame implements ActionListener {
     // C Major: Confirmed Working
@@ -44,9 +56,7 @@ public class MyChords extends JFrame implements ActionListener {
     JButton embtn, a13btn, asusbtn, dmajbtn;
 
     //G Major 
-    JButton ambtn, d13btn, dsusbtn, gmajbtn; 
-
-    JButton drumlp1; 
+    JButton ambtn, d13btn, dsusbtn, gmajbtn;  
 
     AudioClip click; 
    
@@ -256,8 +266,6 @@ public class MyChords extends JFrame implements ActionListener {
     // C Major: Confirmed Working
     public void playDMinor9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/DMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("DMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -271,8 +279,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playGDom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/GDom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             URL url = this.getClass().getClassLoader().getResource("GDom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             Clip clip = AudioSystem.getClip(); 
@@ -287,8 +293,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playGSus13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Gsus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             URL url = this.getClass().getClassLoader().getResource("GSus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             Clip clip = AudioSystem.getClip(); 
@@ -303,8 +307,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playCMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/CMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             URL url = this.getClass().getClassLoader().getResource("CMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             Clip clip = AudioSystem.getClip(); 
@@ -318,8 +320,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playGMinor9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/GMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("GMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -333,8 +333,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playCDom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/CDom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("CDom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -349,8 +347,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playCSus13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Csus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("CSus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -365,8 +361,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playFMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/FMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             File soundFile = new File("FMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -381,8 +375,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playCMinor9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/CMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("CMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -396,8 +388,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playFDom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/FDom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("FDom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -412,8 +402,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playFSus13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Fsus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("FSus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -428,8 +416,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playBbMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/BbMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             File soundFile = new File("BbMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -444,8 +430,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playFMinor9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/FMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("FMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -459,8 +443,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playBbDom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/BbDom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("BbDom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -475,8 +457,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playBbSus13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Bbsus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("BbSus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -491,8 +471,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playEbMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/EbMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             File soundFile = new File("EbMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -506,8 +484,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playBbMinor9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/BbMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("BbMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -521,8 +497,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playEbDom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/EbDom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("EbDom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -537,8 +511,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playEbSus13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Ebsus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("EbSus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -553,8 +525,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playAbMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/AbMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             File soundFile = new File("AbMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -567,9 +537,7 @@ public class MyChords extends JFrame implements ActionListener {
         }
     }
     public void playEbMinor9() {
-        try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/EbMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
+        try { 
             File soundFile = new File("EbMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -583,8 +551,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playAbDom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/AbDom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("AbDom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -598,9 +564,7 @@ public class MyChords extends JFrame implements ActionListener {
     }
 
     public void playAbSus13() {
-        try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Absus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
+        try { 
             File soundFile = new File("AbSus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -615,8 +579,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playDbMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/DbMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             File soundFile = new File("DbMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -630,8 +592,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playAbMinor9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/AbMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("AbMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -645,8 +605,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playDbDom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/DbDom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("DbDom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -661,8 +619,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playDbSus13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Dbsus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("DbSus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -677,8 +633,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playGbMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/GbMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             File soundFile = new File("GbMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -692,8 +646,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playDbMinor9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/DbMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("DbMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -707,8 +659,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playGbDom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/GbDom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("GbDom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -723,8 +673,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playGbSus13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Gbsus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("GbSus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -739,8 +687,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playBMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/BMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             File soundFile = new File("BMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -754,8 +700,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playGbMinor9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/GbMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("GbMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -769,8 +713,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playBDom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/BDom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("BDom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -785,8 +727,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playBSus13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Bsus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("BSus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -801,8 +741,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playEMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/EMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             File soundFile = new File("EMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -816,8 +754,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playBMinor9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/BMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("BMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -831,8 +767,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playEDom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/EDom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("EDom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -847,8 +781,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playESus13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Esus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("ESus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -863,8 +795,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playAMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/AMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             File soundFile = new File("AMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -878,8 +808,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playEMinor9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/EMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("EMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -893,8 +821,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playADom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/ADom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("ADom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -908,9 +834,7 @@ public class MyChords extends JFrame implements ActionListener {
     }
 
     public void playASus13() {
-        try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Asus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
+        try { 
             File soundFile = new File("ASus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -925,8 +849,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playDMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/DMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             File soundFile = new File("DMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -941,8 +863,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playAMinor9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/AMin9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("AMin9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -956,8 +876,6 @@ public class MyChords extends JFrame implements ActionListener {
     }
     public void playDDom13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/DDom13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("DDom13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -972,8 +890,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playDSus13() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/Dsus13.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url); 
             File soundFile = new File("DSus13.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -988,8 +904,6 @@ public class MyChords extends JFrame implements ActionListener {
 
     public void playGMaj9() {
         try {
-            // URL url = new URL("https://chordworld.azurewebsites.net/GMaj9.wav"); 
-            // AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
             File soundFile = new File("GMaj9.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip(); 
@@ -1196,6 +1110,7 @@ public class MyChords extends JFrame implements ActionListener {
             System.out.println("Chord played:  G Major 9 \n");
         }
     }
+
     public static void main(String[] args) {
         System.out.println("KMP Virtual Local Omnichord starting..."); 
         System.out.println("  _      _      _" + " " + "     _      _      _" + "\n" +
@@ -1207,5 +1122,63 @@ public class MyChords extends JFrame implements ActionListener {
         MyChords tst = new MyChords(); 
         MyChords.infoBox("For instructions on how to use certain chords, check the 'README.md' file. \n Click 'OK' to continue. ", "VIRTUAL OMNICHORD v2.0");
         tst.setVisible(true); 
+
+        JMenuBar mb = new JMenuBar(); 
+        JMenu file = new JMenu("File"); 
+        mb.add(file); 
+
+        JMenuItem reorg = new JMenuItem("ReOrg"); 
+        file.add(reorg); 
+
+        JMenuItem clear = new JMenuItem("Clear"); 
+        file.add(clear); 
+
+        JMenuItem screen = new JMenuItem("Screenshot"); 
+        file.add(screen); 
+
+        tst.setJMenuBar(mb); 
+
+        clear.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ev) {
+                tst.getContentPane().removeAll(); 
+                tst.repaint(); 
+            }
+        });
+
+        reorg.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ev) {
+            // run copy
+            }
+
+        }); 
+
+        screen.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ev) {
+                try { 
+                    Scanner sc = new Scanner(System.in); 
+                    String filename; 
+                    System.out.println("Enter the desired file name. No extension required."); 
+
+                    filename = sc.nextLine(); 
+                    Thread.sleep(120); 
+                    Robot r = new Robot(); 
+
+                    String path = "C:/chordCaps/" + filename + ".jpg"; 
+
+                    Rectangle capture =  
+                    new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()); 
+                    BufferedImage Image = r.createScreenCapture(capture); 
+                    ImageIO.write(Image, "jpg", new File(path)); 
+                    System.out.println("Screenshot saved"); 
+                } catch (Exception e) {
+                    System.out.println("Error occurred."); 
+                }
+            }
+
+        }); 
+
+        if (args.length > 1) {
+            System.out.println("This is a test"); 
+        }
     }
 }

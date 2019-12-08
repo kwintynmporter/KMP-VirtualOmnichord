@@ -1112,7 +1112,7 @@ public class MyChords extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        System.out.println("KMP Virtual Local Omnichord starting..."); 
+        System.out.println("KMP Virtual *Local* Omnichord starting..."); 
         System.out.println("  _      _      _" + " " + "     _      _      _" + "\n" +
         ">(.)__ <(.)__ =(.)__" + " " + ">(.)__ <(.)__ =(.)__" + "\n" + 
         " (___/  (___/  (___/" + " " + " (___/  (___/  (___/" + "\n" +
@@ -1156,22 +1156,49 @@ public class MyChords extends JFrame implements ActionListener {
             public void actionPerformed(ActionEvent ev) {
                 try { 
                     Scanner sc = new Scanner(System.in); 
-                    String filename; 
-                    System.out.println("Enter the desired file name. No extension required."); 
+                    String filename, pathname;
+                    String answer;  
+                    System.out.println("Do you have your own path? Enter y, n, yes, or no \n" + 
+                    "If you answered no, you will be defaulted to C:/chordCaps/. \n"); 
+                    answer = sc.nextLine();  
 
-                    filename = sc.nextLine(); 
-                    Thread.sleep(120); 
-                    Robot r = new Robot(); 
+                    if (answer.equalsIgnoreCase("n") || answer.equalsIgnoreCase("no")) {
+                        System.out.println("\n No pathname declared. Screenshots will be defaulted to 'C:/chordCaps'\n"); 
+                        System.out.println("Enter the desired file name. No extension required.\n");
+                        filename = sc.nextLine(); 
+                        Thread.sleep(120); 
+                        Robot r = new Robot(); 
 
-                    String path = "C:/chordCaps/" + filename + ".jpg"; 
+                        String path = "C:/chordCaps/" + filename + ".jpg"; 
 
-                    Rectangle capture =  
-                    new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()); 
-                    BufferedImage Image = r.createScreenCapture(capture); 
-                    ImageIO.write(Image, "jpg", new File(path)); 
-                    System.out.println("Screenshot saved"); 
+                        Rectangle capture =  
+                        new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()); 
+                        BufferedImage Image = r.createScreenCapture(capture); 
+                        ImageIO.write(Image, "jpg", new File(path)); 
+                        System.out.println("---------------------------------------");
+                        System.out.println("Screenshot saved successfully as " + filename + ".jpg \n"); 
+                    }
+                    else {
+                        System.out.println("Enter desired pathname. Be sure to end with a forward slash."); 
+                        pathname = sc.nextLine(); 
+                        
+                        System.out.println("\n---------------------------------------");
+                        System.out.println("Enter the desired file name. No extension required.\n");
+                        filename = sc.nextLine(); 
+                        Thread.sleep(120); 
+                        Robot r = new Robot(); 
+
+                        String path = pathname + filename + ".jpg"; 
+
+                        Rectangle capture =  
+                        new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()); 
+                        BufferedImage Image = r.createScreenCapture(capture); 
+                        ImageIO.write(Image, "jpg", new File(path)); 
+                        System.out.println("---------------------------------------");
+                        System.out.println("\n Screenshot saved successfully as " + filename + ".jpg \n");
+                    }
                 } catch (Exception e) {
-                    System.out.println("Error occurred."); 
+                    System.out.println("Error occurred while screencapturing."); 
                 }
             }
 
